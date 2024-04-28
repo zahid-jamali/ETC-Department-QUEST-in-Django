@@ -1,0 +1,26 @@
+{%include 'nav.html'%}
+<br>
+<div class="form">
+	<form method="post" action="#">
+{% csrf_token %}
+		<label>Name:</label>
+		<input type="text" name="name" placeholder="Your Name"><br>
+                <label>Email:</label>
+                <input type="email" name="email" placeholder="Your Email"><br>
+                <label>Text:</label>
+                <textarea name="text" style="width: 350px; height: 130px;" placeholder="Your Name"></textarea><br>
+		<input type="submit" value="Send">
+		<input type="reset" value="Reset">
+	</form>
+</div>
+<br>
+<br>
+{% include 'footer.html'%}
+<style>
+.form{
+	width: 60%;
+	border: thin solid silver;
+	margin: auto;
+	padding: auto;
+}
+</style>
